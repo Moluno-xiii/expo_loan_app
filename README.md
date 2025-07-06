@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Welcome to my Mock loan Expo app
 
 ## Get started
 
-1. Install dependencies
+1. Clone the repo
 
    ```bash
-   npm install
+   git clone https://github.com/Moluno-xiii/expo_loan_app.git
    ```
 
-2. Start the app
+2. Install dependencies
 
    ```bash
-   npx expo start
+   pnpm install
    ```
 
-In the output, you'll find options to open the app in a
+3. Start the app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   pnpm start
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. Install 'Expo go' app on your Android or Ios device.
+5. Scan the QR code on the command line when you ran the app with 'pnpm start' on the installed Expo go app (on Android) and with your camera (on IOS).
 
-## Get a fresh project
+## App Images
 
-When you're ready, run:
+![Index page, with logged in user.](./readme_images/index_page1.jpg)
+![Index page, new user (not logged in).](./readme_images/index_page2.jpg)
+![Login screen.](./readme_images/login_screen.jpg)
+![Login screen with validation error.](./readme_images/login_screen_validation_error.jpg)
+![Home screen with loan list.](./readme_images/home_screen.jpg)
+![Home screen with another theme.](./readme_images/home_screen_themed.jpg)
+![Home screen logout modal.](./readme_images/home_screen_logout_modal.jpg)
+![Loan details screen.](./readme_images/loan_details_screen.jpg)
+![Loan application screen filled.](./readme_images/loan_details_screen_2.jpg)
+![Loan application screen (with validation error).](./readme_images/loan_details_screen_validation_error.jpg)
+![Loan application screen loading state.](./readme_images/loan_details_screen_loading_state.jpg)
+![Loan application success toast.](./readme_images/loan_application_success.jpg)
 
-```bash
-npm run reset-project
-```
+## Assumptions i made.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- I mocked all data fetching from locally stored json.
+- Normally, it would be done in a number of ways (tanstack query, swr, graphQL apollo).
+- I added timeouts to all data fetching, mutation functions to simulate real fetching mutation ( show the loading spinner).
+- I put most of the components styling inside the component itself, normally it would be put in separate files for readability, but in this case, the code is still readable because the codebase is lightweight.
+- Handled user's auth data with context instead of redux / zustand because it suits this case (lightweight and doesn't change frequently) since any change on any context value from any component causes all components consuming the context to rerender.
+- Put the logout button on the home screen even though it's bad practice, normally would put it in another screen (settings or profile) i went this way since it's just for testing purposes.

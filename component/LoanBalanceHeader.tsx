@@ -2,7 +2,7 @@ import useAuth from "@/hooks/useAuth";
 import useTheme from "@/hooks/useTheme";
 import { LoanType } from "@/types";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Link } from "expo-router";
+import { router } from "expo-router";
 import { useMemo } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Button from "./ui/Button";
@@ -81,13 +81,9 @@ const LoanBalanceHeader = ({ loanData }: { loanData: LoanType[] }) => {
           backgroundColor: theme.text,
           width: "100%",
         }}
+        onClick={() => router.push("/apply")}
       >
-        <Link
-          style={{ width: "100%", textAlign: "center", color: theme.primary }}
-          href={"/apply"}
-        >
-          Apply for Loans
-        </Link>
+        <Text>Apply for loans</Text>
       </Button>
     </View>
   );

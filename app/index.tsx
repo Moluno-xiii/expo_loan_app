@@ -21,7 +21,6 @@ export default function Index() {
       }),
     [theme]
   );
-  console.log("usr", user);
   return (
     <View
       style={{
@@ -33,22 +32,34 @@ export default function Index() {
       }}
     >
       <Header />
+      {/* <View>
+        <Text>
+          Get a loan with affordable interest rates in minutes, with Quick Loan
+        </Text>
+      </View> */}
       <View
         style={{
           flex: 1,
           width: "100%",
           justifyContent: "center",
           alignItems: "center",
+          gap: 10,
         }}
       >
-        <Text>Welcome, {user?.email ? user.email : "USER"}</Text>
+        <Text style={{ fontSize: 18, textAlign: "center" }}>
+          Get a loan with affordable interest rates in minutes, with
+          <Text style={{ fontSize: 25, fontStyle: "italic" }}>Quick Loan.</Text>
+        </Text>
+        <Text style={{ fontSize: 16 }}>
+          Welcome, {user?.email ? "back " + user.email : "USER"}
+        </Text>
         {user?.email ? (
           <Link style={styles.link} href={"/home"}>
             Continue
           </Link>
         ) : (
           <Link style={styles.link} href={"/login"}>
-            login
+            Get started
           </Link>
         )}
       </View>

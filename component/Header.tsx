@@ -16,7 +16,7 @@ const Header = () => {
           width: "100%",
           alignItems: "center",
           borderRadius: 10,
-          paddingHorizontal: 5,
+          padding: 5,
         },
       }),
     [theme]

@@ -68,6 +68,7 @@ const Apply = () => {
           borderRadius: 10,
           paddingHorizontal: 5,
           backgroundColor: theme.background,
+          gap: 20,
         },
         header: {
           borderRadius: 25,
@@ -84,7 +85,6 @@ const Apply = () => {
     <View style={styles.screen}>
       <View
         style={{
-          gap: 5,
           width: "100%",
           alignItems: "center",
         }}
@@ -107,7 +107,6 @@ const Apply = () => {
       </View>
       <View
         style={{
-          gap: 5,
           width: "100%",
           alignItems: "center",
         }}

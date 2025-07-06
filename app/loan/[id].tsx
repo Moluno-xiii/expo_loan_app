@@ -46,7 +46,16 @@ const LoanDetails = () => {
     [theme]
   );
 
-  if (!data) return <NoData title="No loan data." />;
+  if (!data)
+    return (
+      <NoData title="No loan data.">
+        <Button
+          onPress={() => router.back()}
+          color={theme.primary}
+          title="Go back"
+        />
+      </NoData>
+    );
 
   return (
     <View style={styles.screen}>

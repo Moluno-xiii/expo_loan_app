@@ -23,6 +23,7 @@ const FormItem = ({ isPassword, setValue, value, name, email }: Props) => {
           color: theme.primary,
           backgroundColor: theme.backgroundLight,
           paddingHorizontal: 10,
+          height: 40,
         },
         container: {
           flexDirection: "column",
