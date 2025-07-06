@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "number_guessing_game",
-    "slug": "number_guessing_game",
+    "name": "loan_app",
+    "slug": "loan_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
